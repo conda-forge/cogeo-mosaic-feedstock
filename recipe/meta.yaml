@@ -20,24 +20,26 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.7
   run:
     - attrs
     - cachetools
-    - mercantile
-    - morecantile >=2.1
+    - httpx
+    - morecantile >=3.1,<4.0
     - pydantic
     - pygeos >=0.10
-    - python >=3.6
+    - python >=3.7
     - rasterio
-    - requests
-    - rio-tiler >=2.0
+    - rio-tiler >=3.1,<4.0
     - supermercado
+    - boto3
+    - google-cloud-storage
 
 test:
   imports:
     - cogeo_mosaic
     - cogeo_mosaic.backends
+    - cogeo_mosaic.scripts.cli
   commands:
     - pip check
     - cogeo-mosaic --help
