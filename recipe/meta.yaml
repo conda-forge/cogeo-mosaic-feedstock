@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cogeo-mosaic-{{ version }}.tar.gz
-  sha256: 8ff100ecc3a96fcc019edc2c0675469474b3dd43a3bf39267772f265481e1f8f
+  url: https://github.com/developmentseed/cogeo-mosaic/archive/refs/tags/{{ version }}.tar.gz
+  sha256: a506b1d56807268e01f23f739f32f23b3b190a3e1fbb202b92fea75ae3b388d5
 
 build:
   number: 0
