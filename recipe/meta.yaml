@@ -1,5 +1,5 @@
 {% set name = "cogeo-mosaic" %}
-{% set version = "4.1.0" %}
+{% set version = "5.1.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cogeo-mosaic-{{ version }}.tar.gz
-  sha256: a7827ecc3c7c1dd7484c3e1cf069085895d80fdf8b0dc9b420c6554c98a3ba17
+  sha256: 8ff100ecc3a96fcc019edc2c0675469474b3dd43a3bf39267772f265481e1f8f
 
 build:
   number: 0
@@ -19,13 +19,17 @@ build:
 
 requirements:
   host:
+    - python >=3.8
+    - hatchling
+    - hatch-fancy-pypi-readme >=22.5.0
     - pip
-    - python >=3.7,<3.9
   run:
+    - python >=3.8
     - attrs
     - cachetools
     - httpx
     - morecantile >=3.1,<4.0
+    - shapely >=2.0b2,<3.0
     - pydantic
     - pygeos >=0.10
     - python >=3.7,<3.9
@@ -38,8 +42,6 @@ requirements:
 test:
   imports:
     - cogeo_mosaic
-    - cogeo_mosaic.backends
-    - cogeo_mosaic.scripts.cli
   commands:
     - pip check
     - cogeo-mosaic --help
