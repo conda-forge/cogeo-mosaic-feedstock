@@ -1,5 +1,5 @@
 {% set name = "cogeo-mosaic" %}
-{% set version = "4.1.0" %}
+{% set version = "6.2.0" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cogeo-mosaic-{{ version }}.tar.gz
-  sha256: a7827ecc3c7c1dd7484c3e1cf069085895d80fdf8b0dc9b420c6554c98a3ba17
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cogeo_mosaic-{{ version }}.tar.gz
+  sha256: ff1f5548c1dc1e6b8bd01bc46d43a919d412ca11bd27db526d44e8d66d7dce11
 
 build:
   number: 0
@@ -20,18 +20,20 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7,<3.9
+    - hatchling
+    - hatch-fancy-pypi-readme
+    - python >=3.8
   run:
     - attrs
-    - cachetools
+    - morecantile >=4.1,<5.0
+    - shapely >=2.0,<3.0
+    - pydantic 
+    - python >=3.8
     - httpx
-    - morecantile >=3.1,<4.0
-    - pydantic
-    - pygeos >=0.10
-    - python >=3.7,<3.9
     - rasterio
-    - rio-tiler >=3.1,<4.0
-    - supermercado
+    - rio-tiler >=5.0,<6.0
+    - supermorecado
+    - cachetools
     - boto3
     - google-cloud-storage
 
@@ -57,3 +59,4 @@ extra:
   recipe-maintainers:
     - andrewannex
     - lsetiawan
+    - andrewannex
