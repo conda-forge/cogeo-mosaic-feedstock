@@ -32,7 +32,7 @@ requirements:
     - httpx
     - rasterio
     - rio-tiler >=5.0,<6.0
-    - supermercado
+    - supermorecado
     - cachetools
     - boto3
     - google-cloud-storage
