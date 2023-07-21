@@ -1,5 +1,5 @@
 {% set name = "cogeo-mosaic" %}
-{% set version = "4.1.0" %}
+{% set version = "6.2.0" %}
 
 
 package:
@@ -20,18 +20,18 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7,<3.9
+    - python >=3.8
   run:
     - attrs
-    - cachetools
+    - morecantile>=4.1,<5.0
+    - shapely>=2.0,<3.0
+    - pydantic~=1.0
+    - python >=3.8
     - httpx
-    - morecantile >=3.1,<4.0
-    - pydantic
-    - pygeos >=0.10
-    - python >=3.7,<3.9
     - rasterio
-    - rio-tiler >=3.1,<4.0
+    - rio-tiler>=5.0,<6.0
     - supermercado
+    - cachetools
     - boto3
     - google-cloud-storage
 
@@ -56,3 +56,4 @@ about:
 extra:
   recipe-maintainers:
     - lsetiawan
+    - andrewannex
