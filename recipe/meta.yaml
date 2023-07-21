@@ -21,6 +21,7 @@ requirements:
   host:
     - pip
     - hatchling
+    - hatch-fancy-pypi-readme
     - python >=3.8
   run:
     - attrs
