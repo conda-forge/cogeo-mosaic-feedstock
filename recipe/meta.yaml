@@ -27,6 +27,7 @@ requirements:
     - attrs
     - morecantile >=5.0,<6.0
     - shapely >=2.0,<3.0
+    - numpy
     - pydantic
     - pydantic-settings
     - python >=3.8
@@ -37,6 +38,9 @@ requirements:
     - cachetools
     - boto3
     - google-cloud-storage
+    - cligj
+    - click
+    - click-plugins
 
 test:
   imports:
