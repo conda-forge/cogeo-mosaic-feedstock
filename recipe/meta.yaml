@@ -1,5 +1,5 @@
 {% set name = "cogeo-mosaic" %}
-{% set version = "7.0.0" %}
+{% set version = "7.0.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cogeo_mosaic-{{ version }}.tar.gz
-  sha256: fe5bcf16ab801d20a10bcf1ef6a1de913ff231c6a1c0c0ac0673925ffad4fc2e
+  sha256: c070d5393f9346e8b7604f49bd1d659536c75591a888344a520b7cc2caa6a1cf
 
 build:
   number: 0
@@ -27,6 +27,7 @@ requirements:
     - attrs
     - morecantile >=5.0,<6.0
     - shapely >=2.0,<3.0
+    - numpy
     - pydantic
     - pydantic-settings
     - python >=3.8
@@ -37,6 +38,9 @@ requirements:
     - cachetools
     - boto3
     - google-cloud-storage
+    - cligj
+    - click
+    - click-plugins
 
 test:
   imports:
