@@ -1,5 +1,5 @@
 {% set name = "cogeo-mosaic" %}
-{% set version = "7.1.0" %}
+{% set version = "7.2.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cogeo_mosaic-{{ version }}.tar.gz
-  sha256: 4b73f7555e13890f03c6f50a124b05ca916631a8c502472eac03ae69a25fa152
+  sha256: 1fa0168f83adcd1065ab49e7c67bc82a507bba895717ac596f8e26b08bc249cb
 
 build:
   number: 0
