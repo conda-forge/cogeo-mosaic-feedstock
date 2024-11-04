@@ -7,7 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cogeo_mosaic-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cogeo_mosaic-{{ version }}.tar.gz
   sha256: 04ed86b84da3be606e87248d565b6cbc423fd153400e9a763edfae0af4a099ae
 
 build:
