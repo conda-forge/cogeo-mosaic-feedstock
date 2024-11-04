@@ -25,7 +25,7 @@ requirements:
     - python >=3.8
   run:
     - attrs
-    - morecantile >=5.0,<6.0
+    - morecantile >=6.0,<7.0
     - shapely >=2.0,<3.0
     - numpy
     - pydantic
@@ -33,7 +33,7 @@ requirements:
     - python >=3.8
     - httpx
     - rasterio
-    - rio-tiler >=6.0,<7.0
+    - rio-tiler >=7.0,<8.0
     - supermorecado
     - cachetools
     - boto3
