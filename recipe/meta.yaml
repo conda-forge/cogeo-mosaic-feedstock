@@ -11,7 +11,7 @@ source:
   sha256: 04ed86b84da3be606e87248d565b6cbc423fd153400e9a763edfae0af4a099ae
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - cogeo-mosaic = cogeo_mosaic.scripts.cli:cogeo_cli
@@ -22,7 +22,7 @@ requirements:
     - pip
     - hatchling
     - hatch-fancy-pypi-readme
-    - python >=3.8
+    - python {{ python_min }}
   run:
     - attrs
     - morecantile >=5.0,<7.0
@@ -30,7 +30,7 @@ requirements:
     - numpy
     - pydantic
     - pydantic-settings
-    - python >=3.8
+    - python >={{ python_min }}
     - httpx
     - rasterio
     - rio-tiler >=7.0,<8.0
@@ -52,6 +52,7 @@ test:
     - cogeo-mosaic --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://developmentseed.org/cogeo-mosaic
