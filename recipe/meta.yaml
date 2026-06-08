@@ -1,5 +1,6 @@
 {% set name = "cogeo-mosaic" %}
 {% set version = "9.1.0" %}
+{% set python_min = "3.11" %}
 
 
 package:
@@ -16,7 +17,6 @@ build:
   entry_points:
     - cogeo-mosaic = cogeo_mosaic.scripts.cli:cogeo_cli
   script: {{ PYTHON }} -m pip install . -vv
-  skip: True  # [py<311]
 
 requirements:
   host:
