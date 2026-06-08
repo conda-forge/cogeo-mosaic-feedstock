@@ -25,21 +25,21 @@ requirements:
     - hatch-fancy-pypi-readme
     - python {{ python_min }}
   run:
-    - attrs
-    - morecantile >=5.0,<7.0
-    - shapely >=2.0,<3.0
-    - numpy
-    - pydantic
-    - pydantic-settings
     - python >={{ python_min }}
+    - attrs
+    - morecantile >=7.0
+    - rio-tiler >=8.0,<10.0
+    - shapely >=2.0,<3.0
+    - pydantic ~=2.0
+    - pydantic-settings ~=2.0
     - httpx
     - rasterio
-    - rio-tiler >=7.0,<8.0
     - supermorecado
     - cachetools
     - boto3
     - google-cloud-storage
     - cligj
+    - numpy
     - click
     - click-plugins
 
