@@ -1,5 +1,6 @@
 {% set name = "cogeo-mosaic" %}
-{% set version = "8.2.0" %}
+{% set version = "9.1.0" %}
+{% set python_min = "3.11" %}
 
 
 package:
@@ -8,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cogeo_mosaic-{{ version }}.tar.gz
-  sha256: 5dfc79dde66e8563959d9896124209c12a97edb611d87f255550c14840818bfa
+  sha256: f2102e68d3b1e7ee987ea85137ac198bf2f49d83739e4251a30265f4d5436828
 
 build:
   number: 0
@@ -24,21 +25,21 @@ requirements:
     - hatch-fancy-pypi-readme
     - python {{ python_min }}
   run:
-    - attrs
-    - morecantile >=5.0,<7.0
-    - shapely >=2.0,<3.0
-    - numpy
-    - pydantic
-    - pydantic-settings
     - python >={{ python_min }}
+    - attrs
+    - morecantile >=7.0
+    - rio-tiler >=8.0,<10.0
+    - shapely >=2.0,<3.0
+    - pydantic ~=2.0
+    - pydantic-settings ~=2.0
     - httpx
     - rasterio
-    - rio-tiler >=7.0,<8.0
     - supermorecado
     - cachetools
     - boto3
     - google-cloud-storage
     - cligj
+    - numpy
     - click
     - click-plugins
 
