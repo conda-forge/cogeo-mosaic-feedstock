@@ -1,5 +1,5 @@
 {% set name = "cogeo-mosaic" %}
-{% set version = "9.1.0" %}
+{% set version = "9.2.0" %}
 {% set python_min = "3.11" %}
 
 
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cogeo_mosaic-{{ version }}.tar.gz
-  sha256: f2102e68d3b1e7ee987ea85137ac198bf2f49d83739e4251a30265f4d5436828
+  sha256: 8694c3104063662d1ae79fca139eed38d591417af318b9dd89855419e76e2440
 
 build:
   number: 0
@@ -32,7 +32,7 @@ requirements:
     - shapely >=2.0,<3.0
     - pydantic ~=2.0
     - pydantic-settings ~=2.0
-    - httpx
+    - httpx2
     - rasterio
     - supermorecado
     - cachetools
